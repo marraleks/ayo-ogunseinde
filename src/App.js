@@ -9,7 +9,7 @@ const App = () => {
     firebase
     .firestore()
     .collection('images')
-    .orderBy('test')
+    .orderBy('id')
     .onSnapshot(
       snapshot => setImgs(snapshot.docs)
     )
