@@ -1,5 +1,17 @@
 @import "./breakpoints/breakpoints.scss";
+
+// Font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+@font-face{
+  font-family: "AudreyBold";
+  src: local("Audrey-Bold"),
+  url(./fonts/Audrey-Bold.otf) format("opentype")
+}
+@font-face{
+  font-family: "AudreyNormal";
+  src: local("Audrey-Normal"),
+  url(./fonts/Audrey-Normal.otf) format("opentype")
+}
 
 *{
     box-sizing: border-box;
@@ -16,7 +28,5 @@ body {
   }
 
   // Default colors
-
   $white: #EAEAEA;
   $black: rgb(0, 0, 0);
-
