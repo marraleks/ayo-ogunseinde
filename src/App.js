@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { Router } from '@reach/router'
 import "./App.scss";
 import firebase from './data/firebase'
+import Header from './components/Header/Header' 
+import Home from './screens/Home/Home'
+
 
 const App = () => { 
   const [imgs, setImgs] = useState([])
@@ -15,12 +19,12 @@ const App = () => {
     )
   }, [])
 
-  
-  
-
   return(
     <>  
-      <p>Ayo <br/> Ogunseinde</p>
+      <Header/>
+        <Router basepath={process.env.PUBLIC_URL}>
+          <Home default path='/home/' imgs={imgs}/>
+        </Router>
     </>
   )
 }
