@@ -13,10 +13,16 @@
   url(./fonts/Audrey-Normal.otf) format("opentype")
 }
 
+// Default colors
+$white: #EAEAEA;
+$black: rgb(0, 0, 0);
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -25,8 +31,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $white;
   }
 
-  // Default colors
-  $white: #EAEAEA;
-  $black: rgb(0, 0, 0);
+

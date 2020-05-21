@@ -1,0 +1,16 @@
+@import "../../App.scss";
+
+.home-container{
+    background-color: $white;
+}
+@include media('<=tablet'){
+.home-img-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    .home-img{
+        width: 90%;
+    }  
+}
+}
+

@@ -1,0 +1,49 @@
+@import "../../App.scss";
+
+.hero-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    background-image: url(../../images/hero-image.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h5{
+        margin-top: -10vh;
+        color: $white;
+        font-size: 11rem;
+        mix-blend-mode: difference;
+    }
+
+    .professions{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-auto-flow: column;
+        gap: 50%;
+        
+
+    }
+
+    h6{
+        font-size: 1.5rem;        
+        color: $white;
+        font-family: 'AudreyBold';
+    }
+    .scroll{
+        color: white;
+        position: absolute;
+        font-weight: 600;
+        transform: rotate(90deg);
+        text-transform: uppercase;
+        mix-blend-mode: difference;
+        z-index: 100;
+        bottom: 20px;
+        right: 0;
+    }
+}
+

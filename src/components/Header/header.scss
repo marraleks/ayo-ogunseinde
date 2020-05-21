@@ -1,0 +1,27 @@
+@import "../../App.scss";
+
+header{
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    mix-blend-mode: difference;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    div{
+        display: grid;
+        height: 100%;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 2rem;
+        color: $white;
+    }
+    .header-logo{
+        color: $white;
+        text-decoration: none;
+        font-family: 'AudreyBold';
+    }
+}
+
