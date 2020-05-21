@@ -9,8 +9,8 @@ const Hero = () => {
         <div className={"hero-container"}>
             <h5>Ayo Ogunseinde</h5>
             <div className="professions">
-                <h6>Visual artist</h6>    
-                <h6>Photographer</h6>    
+                <p>Visual artist</p>    
+                <p>Photographer</p>    
             </div>        
             <div className="scroll">Scroll down</div>
         </div>
