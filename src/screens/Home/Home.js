@@ -11,7 +11,7 @@ const Home = (props) => {
         {
             props.imgs.map(
                 (img, index) => 
-                <div className="home-img-container">
+                <div className="home-img-container" key={index}>
                     <img 
                     onClick={() => navigate(process.env.PUBLIC_URL + '/gallery/' + img.id)} 
                         className={`home-img ${img.id}`}
