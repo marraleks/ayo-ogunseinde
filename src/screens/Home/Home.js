@@ -8,20 +8,19 @@ const Home = (props) => {
     return(
         <div className="home-container">
         <Hero />
+        <div className="home-img-container">
         {
             props.imgs.map(
                 (img, index) => 
-                <div className="home-img-container" key={index}>
                     <img 
                     onClick={() => navigate(process.env.PUBLIC_URL + '/gallery/' + img.id)} 
                         className={`home-img ${img.id}`}
                         key={index} 
                         alt={img.id} 
                         src={img.data().url}/>
-                </div>
-                
-            )
-        }
+                        )
+                    }
+                    </div>
         </div>
     )
 }
