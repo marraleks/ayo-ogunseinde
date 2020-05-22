@@ -25,8 +25,6 @@
         justify-content: center;
         grid-auto-flow: column;
         gap: 50%;
-        
-
     }
 
     p{
@@ -47,3 +45,46 @@
     }
 }
 
+@include media(">=LGdesktop"){
+    .hero-container{
+        h5{
+            font-size: 13rem;
+        }
+    }
+}
+
+@include media("<=desktop"){
+    .hero-container{
+        h5{
+            font-size: 6rem;
+        }
+        .professions{
+            gap: 30%;
+        }
+    }
+}
+
+@include media("<=smalldesk"){
+    .hero-container{
+        h5{
+            font-size: 5rem;
+        }
+        .scroll{
+            display: none;
+        }
+        .professions{
+            gap: 40%;
+        }
+    }
+}
+
+@include media("<=tablet"){
+    .hero-container{
+        h5{
+            display: none;
+        }
+        .professions{
+            display: none;
+        }
+    }
+}
