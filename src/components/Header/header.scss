@@ -60,6 +60,7 @@ header{
         background-color:black;
         mix-blend-mode: normal;
         z-index: 9998;
+        pointer-events: none;
         &.visible{
             transition: 0.2s ease;
             opacity: 1;

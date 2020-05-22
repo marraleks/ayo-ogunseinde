@@ -2,6 +2,10 @@ import React from 'react'
 import './Hero.scss'
 import Header from '../Header/Header'
 
+//Stop vh to change when you scroll up and down on phone
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const Hero = () => {
     return(
         <>
