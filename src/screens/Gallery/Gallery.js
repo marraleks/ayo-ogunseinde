@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import firebase from '../../data/firebase'
 import { Link } from '@reach/router'
+import './Gallery.scss'
 
 const Gallery = (props) => {
     
@@ -33,20 +34,30 @@ const Gallery = (props) => {
             setPrev(myPos === 0 ? array[array.length - 1 ] : array[myPos -1])
         })
     }, [props.id])
-
     
     return(
-        <>
+        <div className="gallery-screen">
             {
-                currentImg ? 
-                <img alt={currentImg.id} src={currentImg.url} />
+                currentImg ?
+                <> 
+                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container" >
+                </div>
+                <div className="gallery-img-description">
+                    <h5>{currentImg.header}</h5>
+                    <p>This paragraph is ment for the artist to describe the picture or fill in with relevant information regarding the image. </p>
+                    <div className="gallery-navs">
+                        <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
+                        <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
+                    </div>
+                </div>
+                </>
                 :
                 <h2>Please stand by</h2>
             }
-            <Link to={process.env.PUBLIC_URL + '/home'}>close</Link>
-            <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
-            <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
-        </>
+
+            <Link className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
+            
+        </div>
     )
 }
 

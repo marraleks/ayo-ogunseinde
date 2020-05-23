@@ -1,0 +1,38 @@
+.gallery-screen{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    .gallery-img-container{
+        position: relative;
+        height: 90vh;  
+        width: 40vw;
+        align-self: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+    
+    .gallery-img-description{
+        h5{
+            font-family: 'AudreyBold';
+            text-transform: uppercase;
+            font-size: 4rem;
+        }
+    }
+    
+    .close-btn{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+
+
+}
+
