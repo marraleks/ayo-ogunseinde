@@ -40,21 +40,20 @@ const Gallery = (props) => {
             {
                 currentImg ?
                 <> 
-                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container" >
-                </div>
+                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container"/>
                 <div className="gallery-img-description">
                     <h5>{currentImg.header}</h5>
                     <p>This paragraph is ment for the artist to describe the picture or fill in with relevant information regarding the image. </p>
-                    <div className="gallery-navs">
-                        <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
-                        <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
-                    </div>
                 </div>
                 </>
                 :
                 <h2>Please stand by</h2>
             }
 
+                <div className="gallery-navs">
+                    <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
+                    <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
+                </div>
             <Link className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
             
         </div>
