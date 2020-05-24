@@ -42,7 +42,6 @@ const Gallery = (props) => {
                 currentImg ?
                 <> 
                 <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container"></div>
-                <div className="gallery-img-description">
                     <p className='img-header'>{currentImg.header}</p>
                     <div className="camera-stats">
                         {
@@ -58,7 +57,6 @@ const Gallery = (props) => {
                         <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
                         <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
                     </div>
-                </div>
                 </>
                 :
                 <h2>Please stand by</h2>
