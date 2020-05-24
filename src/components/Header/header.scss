@@ -22,13 +22,16 @@ header{
     .header-logo{
         color: $white;
         text-decoration: none;
-        font-family: 'AudreyBold';
+        font-family: 'freight-neo-pro', 'sans-serif';
+        font-weight: 700;
+        line-height: 1;
     }
     .site-navs{
         a{
             color: $white;
             text-decoration: none;
-            font-family: 'AudreyNormal';
+            font-family: 'freight-neo-pro', 'sans-serif';
+            font-weight: 500;
             font-size: 0.9em;
         }
     }
@@ -61,9 +64,20 @@ header{
         mix-blend-mode: normal;
         z-index: 9998;
         pointer-events: none;
+        .header-logo{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+        .site-navs{
+            grid-auto-flow: row;
+            text-align: center;
+            font-size: 2rem;
+        }
         &.visible{
             transition: 0.2s ease;
             opacity: 1;
+            pointer-events: unset;
             }
         }
 }

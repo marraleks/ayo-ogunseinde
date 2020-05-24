@@ -2,16 +2,7 @@
 
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
-@font-face{
-  font-family: "AudreyBold";
-  src: local("Audrey-Bold"),
-  url(./fonts/Audrey-Bold.otf) format("opentype")
-}
-@font-face{
-  font-family: "AudreyNormal";
-  src: local("Audrey-Normal"),
-  url(./fonts/Audrey-Normal.otf) format("opentype")
-}
+@import url("https://use.typekit.net/bvb0qbr.css");
 
 *{
     box-sizing: border-box;

@@ -15,11 +15,12 @@
         background-size: cover;
     }
     .img-header{
-        grid-column: 10/20;
+        grid-column: 12/20;
         grid-row: 4/8;
-        font-size: 2.8rem;
+        font-size: 2.9rem;
         text-transform: uppercase;
-        font-family: 'AudreyNormal';
+        font-family: 'freight-neo-pro', 'sans-serif';
+        font-weight: 500;
     }
     .camera-stats{
         display: grid;
