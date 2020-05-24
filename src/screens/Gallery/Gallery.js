@@ -6,6 +6,7 @@ import './Gallery.scss'
 const Gallery = (props) => {
     
     const [currentImg, setCurrentImg] = useState()
+    const [bkColor, setBkColor] = useState("")
     const [prev, setPrev] = useState()
     const [next, setNext] = useState()
 
@@ -16,7 +17,10 @@ const Gallery = (props) => {
         .collection("images")
         .doc(props.id)
         .onSnapshot(
-            snapshot => setCurrentImg(snapshot.data())
+            snapshot => {
+                setCurrentImg(snapshot.data())
+                setBkColor(snapshot.data().color)
+            }
         )
     }, [props.id])
     
@@ -37,7 +41,7 @@ const Gallery = (props) => {
     
     return(
         <>
-        <div className="gallery-screen">
+        <div className="gallery-screen" style={{backgroundColor: bkColor}}>
             {
                 currentImg ?
                 <> 
