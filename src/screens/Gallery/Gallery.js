@@ -6,6 +6,7 @@ import './Gallery.scss'
 const Gallery = (props) => {
     
     const [currentImg, setCurrentImg] = useState()
+    const [textColor, setTextColor] = useState("")
     const [bkColor, setBkColor] = useState("")
     const [prev, setPrev] = useState()
     const [next, setNext] = useState()
@@ -20,6 +21,7 @@ const Gallery = (props) => {
             snapshot => {
                 setCurrentImg(snapshot.data())
                 setBkColor(snapshot.data().color)
+                setTextColor(snapshot.data().textColor ? snapshot.data().textColor : "black")
             }
         )
     }, [props.id])
@@ -41,7 +43,7 @@ const Gallery = (props) => {
     
     return(
         <>
-        <div className="gallery-screen" style={{backgroundColor: bkColor}}>
+        <div className="gallery-screen" style={{backgroundColor: bkColor, color: textColor}}>
             {
                 currentImg ?
                 <> 
@@ -58,15 +60,15 @@ const Gallery = (props) => {
                         }
                     </div>
                     <div className="gallery-navs">
-                        <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
-                        <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
+                        <Link style={{color: textColor}} to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
+                        <Link style={{color: textColor}} to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
                     </div>
                 </>
                 :
                 <h2>Please stand by</h2>
             }
         </div>
-            <Link className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
+            <Link style={{color: textColor}} className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
         </>
     )
 }
