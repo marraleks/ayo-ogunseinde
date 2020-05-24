@@ -36,27 +36,36 @@ const Gallery = (props) => {
     }, [props.id])
     
     return(
+        <>
         <div className="gallery-screen">
             {
                 currentImg ?
                 <> 
-                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container"/>
+                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container"></div>
                 <div className="gallery-img-description">
-                    <h5>{currentImg.header}</h5>
-                    <p>This paragraph is ment for the artist to describe the picture or fill in with relevant information regarding the image. </p>
+                    <p className='img-header'>{currentImg.header}</p>
+                    <div className="camera-stats">
+                        {
+                            <>
+                                <p><span>Focal Lenght</span><br/>{currentImg.focalLenght ? currentImg.focalLenght : "unknown"}</p>
+                                <p><span>Apeture</span><br/>{currentImg.aperture ? currentImg.aperture : "unknown"}</p>
+                                <p><span>Shutter Speed</span><br/>{currentImg.shutterSpeed ? currentImg.shutterSpeed : "unknown"}</p>
+                                <p><span>ISO</span><br/>{currentImg.iso ? currentImg.iso : "unknown"}</p>
+                            </>
+                        }
+                    </div>
+                    <div className="gallery-navs">
+                        <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
+                        <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
+                    </div>
                 </div>
                 </>
                 :
                 <h2>Please stand by</h2>
             }
-
-                <div className="gallery-navs">
-                    <Link to={process.env.PUBLIC_URL + '/gallery/' + prev}>prev</Link>
-                    <Link to={process.env.PUBLIC_URL + '/gallery/' + next}>next</Link>
-                </div>
-            <Link className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
-            
         </div>
+            <Link className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
+        </>
     )
 }
 
