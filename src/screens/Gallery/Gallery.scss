@@ -27,7 +27,7 @@
 
     .camera-stats{
         display: grid;
-        grid-template-columns: repeat(2, 200px);
+        grid-template-columns: repeat(2, 300px);
         justify-content: center;
         margin-left: 150px;
         p{
@@ -42,7 +42,7 @@
         position: absolute;
         bottom: 10%;
         display: grid;
-        grid-template-columns: repeat(2, 200px);
+        grid-template-columns: repeat(2, 300px);
         justify-content: center;
         margin-left: 150px;
         a{
