@@ -38,14 +38,16 @@
             font-size: 2.5rem;
             grid-column: 12/21;
         }
-        @include media("<=phone"){
-            grid-column: 1/21;
-            grid-row: 3/11;
+        @include media("<=tablet"){
+            grid-column: 2/21;
+            grid-row: 2/4;
+            align-self: end;
         }
         @include media("<=phone"){
             font-size: 2rem;
             grid-column: 1/21;
             grid-row: 2/11;
+            align-self: start;
         }
     }
     .camera-stats{
