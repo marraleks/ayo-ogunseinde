@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../../components/Hero/Hero'
+import Footer from '../../components/Footer/Footer'
 import { navigate } from '@reach/router'
 import './Home.scss'
 
@@ -21,6 +22,7 @@ const Home = (props) => {
                         )
                     }
                     </div>
+            <Footer/>
         </div>
     )
 }

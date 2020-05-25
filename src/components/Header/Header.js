@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import {MdMenu} from "react-icons/md"
 import {MdClose} from "react-icons/md"
 import { Link } from '@reach/router'
-import './header.scss'
+import './Header.scss'
 
 const Header = () => {
 
     const [show, setShow] = useState(false)
-    
+
     return(
         <>
             <div className="burger" onClick={() => setShow(!show)}>

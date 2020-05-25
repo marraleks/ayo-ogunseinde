@@ -25,6 +25,7 @@ header{
         font-family: 'freight-neo-pro', 'sans-serif';
         font-weight: 700;
         line-height: 1;
+        overflow: hidden;
     }
     .site-navs{
         a{
@@ -40,8 +41,8 @@ header{
 
 .burger{
     display: none;
-    z-index: 9999;
     position: fixed;
+    z-index: 9999;
     mix-blend-mode: difference;
 }
 
