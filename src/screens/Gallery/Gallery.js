@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import firebase from '../../data/firebase'
 import { Link } from '@reach/router'
 import './Gallery.scss'
+import {gsap} from 'gsap'
 
 const Gallery = (props) => {
     
@@ -10,8 +11,10 @@ const Gallery = (props) => {
     const [bkColor, setBkColor] = useState("")
     const [prev, setPrev] = useState()
     const [next, setNext] = useState()
+    let background = useRef(null)
+    
 
-    // Get current img details from firebase
+    // Get imgages details from firebase
     useEffect(() => {
         firebase
         .firestore()
@@ -40,10 +43,21 @@ const Gallery = (props) => {
             setPrev(myPos === 0 ? array[array.length - 1 ] : array[myPos -1])
         })
     }, [props.id])
+
+    useEffect(() => {
+        gsap.to([background], 1, {
+            delay: 0.2,
+            ease: "power3.out",
+            width: "0",
+            stagger:{
+                amount: 0.15,
+            }
+        })
+    })
     
     return(
-        <>
         <div className="gallery-screen" style={{backgroundColor: bkColor, color: textColor}}>
+        <div ref={el => background = el} className="test"/>
             {
                 currentImg ?
                 <> 
@@ -67,9 +81,8 @@ const Gallery = (props) => {
                 :
                 <h2>Please stand by</h2>
             }
-        </div>
             <Link style={{color: textColor}} className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
-        </>
+        </div>
     )
 }
 

@@ -1,5 +1,12 @@
 @import '../../breakpoints/breakpoints.scss';
 
+.test{
+    position: fixed;
+    background-color: $white;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+}
 .gallery-screen{
     height: 100vh;
     width: 100vw;
@@ -45,7 +52,7 @@
         }
         @include media("<=phone"){
             font-size: 2rem;
-            grid-column: 1/21;
+            grid-column: 2/21;
             grid-row: 2/11;
             align-self: start;
         }
