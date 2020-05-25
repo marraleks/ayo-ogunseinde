@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {MdMenu} from "react-icons/md"
 import {MdClose} from "react-icons/md"
 import { Link } from '@reach/router'
-import './Header.scss'
+import './Headerr.scss'
 
 
 const Header = () => {
