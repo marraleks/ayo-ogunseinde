@@ -47,7 +47,7 @@ const Gallery = (props) => {
             {
                 currentImg ?
                 <> 
-                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className="gallery-img-container"></div>
+                <div style={{backgroundImage: 'url(' + currentImg.url + ')'}} className={`gallery-img-container image${currentImg.id}`}></div>
                     <p className='img-header'>{currentImg.header}</p>
                     <div className="camera-stats">
                         {
