@@ -62,6 +62,13 @@
             align-self: center;
             gap: 20px;
         }
+        @include media("<=phone"){
+            grid-column: 3/21;
+            grid-row: 11/14;
+            gap: 10px 25vw;
+            align-self: center;
+            justify-self: center;
+        }
     }
     .gallery-navs{
         display: grid;
@@ -76,9 +83,11 @@
             width: fit-content;
         }
         @include media("<=tablet"){
-            grid-column: 5/21;
+            grid-column: 1/21;
             grid-row: 14;
+            gap: 100px;
             align-self: center;
+            justify-self: center;
         }
     }
 }
