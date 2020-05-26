@@ -29,16 +29,10 @@ body {
   z-index: 9999;
 }
 
-p {
-  overflow: hidden;
-  z-index: 9999;
-}
-
 .underline_animation {
   display: inline;
   position: relative;
   overflow: hidden;
-  
 
   &:after {
     content: "";
