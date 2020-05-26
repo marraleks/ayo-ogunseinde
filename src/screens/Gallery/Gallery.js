@@ -81,7 +81,7 @@ const Gallery = (props) => {
                 :
                 <h2>Please stand by</h2>
             }
-            <Link style={{color: textColor}} className="close-btn" to={process.env.PUBLIC_URL + '/home'}>close</Link>
+            <p><Link style={{color: textColor}} className="close-btn underline_animation" to={process.env.PUBLIC_URL + '/home'}>close</Link></p>
         </div>
     )
 }

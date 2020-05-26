@@ -28,3 +28,35 @@ body {
   opacity: 1;
   z-index: 9999;
 }
+
+p {
+  overflow: hidden;
+}
+
+.underline_animation {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  
+
+  &:after {
+    content: "";
+    mix-blend-mode: difference;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: white;
+    height: 1px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover:after, &:focus:after, &:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}

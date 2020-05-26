@@ -22,11 +22,11 @@ const Header = () => {
             </div>
             <header className={show ? 'visible' : ''} onClick={() => setShow(false)}>
                 <div>
-                    <Link onClick={() => window.scrollTo(0)} className={"header-logo"} to={process.env.PUBLIC_URL + "/home"}>Ayo <br/> Ogunseinde</Link>
+                    <p><Link onClick={() => window.scrollTo(0)} className={"header-logo underline_animation"} to={process.env.PUBLIC_URL + "/home"}>Ayo <br/> Ogunseinde</Link></p>
                 </div>
                 <div className="site-navs">
-                    <Link to={process.env.PUBLIC_URL + "/gallery/bilde1"}>images</Link>
-                    <Link to={process.env.PUBLIC_URL + "/about"}>about</Link>
+                    <p><Link className="underline_animation" to={process.env.PUBLIC_URL + "/gallery/bilde1"}>images</Link></p>
+                    <p><Link className="underline_animation" to={process.env.PUBLIC_URL + "/about"}>about</Link></p>
                 </div>
             </header>
         </>

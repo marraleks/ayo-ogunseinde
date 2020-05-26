@@ -6,11 +6,11 @@ const Header = () => {
     
     return(
         <footer>
-            <a href="mailto:armedshutter@loremIpsum.com">Mail</a>
+            <a className="underline_animation" href="mailto:armedshutter@loremIpsum.com">Mail</a>
             <div className="footer-dot"></div>
-            <a href='https://www.instagram.com/armedshutter/' target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a className="underline_animation" href='https://www.instagram.com/armedshutter/' target="_blank" rel="noopener noreferrer">Instagram</a>
             <div className="footer-dot"></div>
-            <a href='https://www.armedshutter.com/' target="_blank" rel="noopener noreferrer">Portfolio</a>
+            <a className="underline_animation" href='https://www.armedshutter.com/' target="_blank" rel="noopener noreferrer">Portfolio</a>
         </footer>
        
     )
