@@ -1,0 +1,52 @@
+@import '../../breakpoints/breakpoints.scss';
+
+    .about-container{
+        height: 100%;
+        width: 100%;
+        background-color: $white;
+        .about-hero{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(12, [col-start] 1fr);
+            grid-template-rows: repeat(12, [row-start] 1fr);
+            .about-profile-pic{
+                width: 100%;
+                grid-column: 4/8;
+                grid-row: 1/11;
+                background-image: url(../../images//Profile.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .about-header{
+                color: $white;
+                line-height: 1;
+                letter-spacing: 5px;
+                grid-column: 2/13;
+                width: 70vw;
+                grid-row: 9/13;
+                mix-blend-mode: difference;
+                font-size: 6rem;
+            }   
+            .about-subheader{
+                font-family: 'freight-neo-pro', 'sans-serif';
+                font-weight: 700;
+                font-size: 1.5rem;
+                font-style: italic;
+                grid-column: 9/12;
+                grid-row: 5/7;
+            }
+        }
+        .about-paragraph-container{
+            width: 40vw;
+            margin-left: 15vw;
+            margin-top: -70px;
+            font-size: 25px;
+            padding-bottom: 20vh;
+            .about-paragraph, .about-getintouch{
+                margin-top: 25px;
+                a{
+                    color: #403F3F;
+                }
+            }
+        }
+    }

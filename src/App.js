@@ -4,6 +4,7 @@ import "./App.scss";
 import firebase from './data/firebase'
 import Home from './screens/Home/Home'
 import Gallery from './screens/Gallery/Gallery'
+import About from './screens/About/About'
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
         <Router basepath={process.env.PUBLIC_URL}>
           <Home default path='/home' imgs={imgs}/>
           <Gallery path="/gallery/:id"/>
+          <About path="/about" />
         </Router>
     </>
   )

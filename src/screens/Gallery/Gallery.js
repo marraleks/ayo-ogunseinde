@@ -57,7 +57,7 @@ const Gallery = (props) => {
     
     return(
         <div className="gallery-screen" style={{backgroundColor: bkColor, color: textColor}}>
-        <div ref={el => background = el} className="test"/>
+        <div ref={el => background = el} className="background"/>
             {
                 currentImg ?
                 <> 

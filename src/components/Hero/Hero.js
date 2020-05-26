@@ -23,7 +23,7 @@ const Hero = () => {
     return(
         <>
         <Header />
-        <div ref={el => hero = el} className="hero-animation"/>
+        <div ref={el => hero = el} className="background"/>
         <div className={"hero-container"}>
             <h5>Ayo Ogunseinde</h5>
             <div className="professions">

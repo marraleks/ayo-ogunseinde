@@ -26,8 +26,7 @@ const Header = () => {
                 </div>
                 <div className="site-navs">
                     <Link to={process.env.PUBLIC_URL + "/gallery/bilde1"}>images</Link>
-                    <Link to={process.env.PUBLIC_URL + "/gallery/bilde1"}>about</Link>
-                    <Link to={process.env.PUBLIC_URL + "/gallery/bilde1"}>contact</Link>
+                    <Link to={process.env.PUBLIC_URL + "/about"}>about</Link>
                 </div>
             </header>
         </>
