@@ -3,6 +3,9 @@ import './About.scss'
 import Header from '../../components/Header/Header'
 import {gsap} from 'gsap'
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const About = () => {
 
     let background = useRef(null)

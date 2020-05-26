@@ -4,11 +4,20 @@
         height: 100%;
         width: 100%;
         background-color: $white;
+        @include media("<=phone"){
+            display: flex;
+            flex-wrap: wrap;
+        }
         .about-hero{
             display: grid;
             height: 100vh;
             grid-template-columns: repeat(12, [col-start] 1fr);
             grid-template-rows: repeat(12, [row-start] 1fr);
+            @include media("<=phone"){
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+            }
             .about-profile-pic{
                 width: 100%;
                 grid-column: 4/8;
@@ -16,16 +25,40 @@
                 background-image: url(../../images//Profile.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
+                background-position: center;
+                @include media("<=tablet"){
+                    grid-column: 1/8;
+                    height: calc(var(--vh, 1vh) * 80);
+                }
+                @include media("<=phone"){
+                    width: 90vw;
+                    margin: 0 auto;
+                }
             }
+            
             .about-header{
+                overflow-y: hidden;
                 color: $white;
                 line-height: 1;
                 letter-spacing: 5px;
                 grid-column: 2/13;
-                width: 70vw;
+                width: 60vw;
                 grid-row: 8/13;
                 mix-blend-mode: difference;
                 font-size: 6rem;
+                @include media("<=desktop"){
+                    font-size: 5rem;
+                    width: 70vw;
+                }
+                @include media("<=tablet"){
+                    font-size: 5rem;
+                    width: 100vw;
+                }
+                @include media("<=phone"){
+                    margin-top: -20px;
+                    padding-left: 10px;
+                    font-size: 2.9rem;
+                }
             }   
             .about-subheader{
                 font-family: 'freight-neo-pro', 'sans-serif';
@@ -33,20 +66,43 @@
                 font-size: 1.5rem;
                 font-style: italic;
                 grid-column: 9/12;
-                grid-row: 5/7;
+                grid-row: 5/8;
+                @include media("<=tablet"){
+                    font-size: 1.2rem;
+                    grid-column: 8/13;
+                    padding: 20px;
+                }
+                @include media("<=phone"){
+                    padding: 0;
+                    margin: 20px auto;
+                    width: 90vw;
+                    font-size: 1.2rem;
+                    grid-column: 9/12;
+                }
             }
         }
         .about-paragraph-container{
-            width: 40vw;
+            width: 50vw;
             margin-left: 15vw;
             margin-top: -70px;
             font-size: 25px;
-            padding-bottom: 20vh;
+            padding-bottom: 50px;
             .about-paragraph, .about-getintouch{
                 margin-top: 25px;
                 a{
                     color: #403F3F;
                 }
+            }
+            @include media("<=desktop"){
+                width: 60vw;
+            }
+            @include media("<=tablet"){
+                width: 80vw;
+            }
+            @include media("<=phone"){
+                margin: 0px auto;
+                width: 90vw;
+                font-size: 1rem;
             }
         }
     }
