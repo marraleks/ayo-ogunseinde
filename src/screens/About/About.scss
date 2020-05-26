@@ -26,7 +26,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                @include media("<=tablet"){
+                @include media("<=smalldesk"){
                     grid-column: 1/8;
                     height: calc(var(--vh, 1vh) * 80);
                 }
@@ -42,17 +42,14 @@
                 line-height: 1;
                 letter-spacing: 5px;
                 grid-column: 2/13;
-                width: 60vw;
                 grid-row: 8/13;
                 mix-blend-mode: difference;
                 font-size: 6rem;
                 @include media("<=desktop"){
                     font-size: 5rem;
-                    width: 70vw;
                 }
-                @include media("<=tablet"){
-                    font-size: 5rem;
-                    width: 100vw;
+                @include media("<=smalldesk"){
+                    font-size: 3.5rem;
                 }
                 @include media("<=phone"){
                     margin-top: -20px;

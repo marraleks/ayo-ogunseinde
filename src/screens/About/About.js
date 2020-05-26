@@ -27,7 +27,7 @@ const About = () => {
             <Header/>
             <div className="about-hero">
                 <div className="about-profile-pic"/>
-                <h6 className="about-header">I LIKE TO TAKE PICTURES</h6>
+                <h6 className="about-header">I LIKE TO TAKE <br/> PICTURES</h6>
                 <p className="about-subheader">I'm Ayo Ogunseinde, an visual artist & photographer based in Huoston. </p>
             </div>
             <section className="about-paragraph-container">
