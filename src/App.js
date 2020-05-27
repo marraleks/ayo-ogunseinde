@@ -6,8 +6,6 @@ import Home from './screens/Home/Home'
 import Gallery from './screens/Gallery/Gallery'
 import About from './screens/About/About'
 
-
-
 const App = () => { 
   const [imgs, setImgs] = useState([])
 

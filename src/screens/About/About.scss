@@ -1,9 +1,16 @@
 @import '../../breakpoints/breakpoints.scss';
 
+body.light-mode .about-container{
+    background-color: $white;
+}
+
+body.dark-mode .about-subheader{
+    color: $white;
+}
+
     .about-container{
         height: 100%;
         width: 100%;
-        background-color: $white;
         @include media("<=phone"){
             display: flex;
             flex-wrap: wrap;

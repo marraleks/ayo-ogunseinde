@@ -3,7 +3,7 @@ import {MdMenu} from "react-icons/md"
 import {MdClose} from "react-icons/md"
 import { Link } from '@reach/router'
 import './Header.scss'
-
+import DarkModeToggle from '../../darkmode/DarkModeToggle'
 
 const Header = () => {
 
@@ -25,6 +25,7 @@ const Header = () => {
                     <p><Link onClick={() => window.scrollTo(0)} className={"header-logo underline_animation"} to={process.env.PUBLIC_URL + "/home"}>Ayo <br/> Ogunseinde</Link></p>
                 </div>
                 <div className="site-navs">
+                    <DarkModeToggle/>
                     <p><Link className="underline_animation" to={process.env.PUBLIC_URL + "/gallery/bilde1"}>images</Link></p>
                     <p><Link className="underline_animation" to={process.env.PUBLIC_URL + "/about"}>about</Link></p>
                 </div>
