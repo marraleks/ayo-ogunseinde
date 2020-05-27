@@ -28,7 +28,7 @@ const About = () => {
             <div className="about-hero">
                 <div className="about-profile-pic"/>
                 <h6 className="about-header">I LIKE TO TAKE <br/> PICTURES</h6>
-                <p className="about-subheader">I'm Ayo Ogunseinde, an visual artist & photographer based in Huoston. </p>
+                <p className="about-subheader">I'm Ayo Ogunseinde, an visual artist & photographer based in Houston. </p>
             </div>
             <section className="about-paragraph-container">
             <p className="about-paragraph">Lorem Ipsum is   simply dummy text of the printing and   typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
