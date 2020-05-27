@@ -1,22 +1,22 @@
 @import "./breakpoints/breakpoints.scss";
 
 // Font
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap");
 @import url("https://use.typekit.net/bvb0qbr.css");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
-    font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.light-mode {
@@ -29,7 +29,7 @@ body.dark-mode {
   color: rgb(236, 236, 236);
 }
 
-.background{
+.background {
   position: fixed;
   background-color: $white;
   height: 100vh;
@@ -58,7 +58,9 @@ body.dark-mode {
     transition-timing-function: ease-out;
   }
 
-  &:hover:after, &:focus:after, &:active:after {
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
     left: 0;
     right: auto;
     width: 100%;
@@ -74,7 +76,7 @@ body.dark-mode {
   height: 50px;
 }
 
-input[type='checkbox'].dmcheck {
+input[type="checkbox"].dmcheck {
   width: 40px;
   height: 10px;
   background: #555;

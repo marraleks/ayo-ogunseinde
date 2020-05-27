@@ -1,86 +1,85 @@
 @import "../../breakpoints/breakpoints.scss";
 
-header{
-    position: fixed;
-    width: 100vw;
-    height: 15vh;
-    mix-blend-mode: difference;
+header {
+  position: fixed;
+  width: 100vw;
+  height: 15vh;
+  mix-blend-mode: difference;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 9998;
+  div {
     display: grid;
+    height: 100%;
     grid-auto-flow: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
+    gap: 2rem;
+    color: $white;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .header-logo {
+    color: $white;
+    text-decoration: none;
+    font-family: "freight-neo-pro", "sans-serif";
+    font-weight: 700;
+    line-height: 1;
+    overflow: hidden;
+  }
+  .site-navs {
+    a {
+      color: $white;
+      text-decoration: none;
+      font-family: "freight-neo-pro", "sans-serif";
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+@include media("<=tablet") {
+  .burger {
+    display: block;
+    cursor: pointer;
+    right: 5%;
+    top: 5%;
+  }
+
+  header {
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    background-color: black;
+    mix-blend-mode: normal;
     z-index: 9998;
-    div{
-        display: grid;
-        height: 100%;
-        grid-auto-flow: column;
-        align-items: center;
-        gap: 2rem;
-        color: $white;
-        text-transform: uppercase;
-        overflow: hidden;
+    pointer-events: none;
+    .header-logo {
+      position: absolute;
+      top: 5%;
+      left: 5%;
     }
-    .header-logo{
-        color: $white;
-        text-decoration: none;
-        font-family: 'freight-neo-pro', 'sans-serif';
-        font-weight: 700;
-        line-height: 1;
-        overflow: hidden;
+    .site-navs {
+      grid-auto-flow: row;
+      text-align: center;
+      font-size: 2rem;
     }
-    .site-navs{
-        a{
-            color: $white;
-            text-decoration: none;
-            font-family: 'freight-neo-pro', 'sans-serif';
-            font-weight: 500;
-            font-size: 0.9em;
-        }
+    &.visible {
+      transition: 0.2s ease;
+      opacity: 1;
+      pointer-events: unset;
     }
+  }
 }
-
-.burger{
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    mix-blend-mode: difference;
-}
-
-@include media('<=tablet'){
-    .burger{
-        display: block;
-        cursor: pointer;
-        right: 5%;
-        top: 5%;
-    }
-
-    header{
-        grid-auto-flow: row;
-        align-content: center;
-        justify-content: center;
-        min-height: 100vh;
-        width: 100vw;
-        opacity: 0;
-        background-color:black;
-        mix-blend-mode: normal;
-        z-index: 9998;
-        pointer-events: none;
-        .header-logo{
-            position: absolute;
-            top: 5%;
-            left: 5%;
-        }
-        .site-navs{
-            grid-auto-flow: row;
-            text-align: center;
-            font-size: 2rem;
-        }
-        &.visible{
-            transition: 0.2s ease;
-            opacity: 1;
-            pointer-events: unset;
-            }
-        }
-    }
-    

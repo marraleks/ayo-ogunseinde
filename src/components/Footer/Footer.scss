@@ -1,25 +1,24 @@
 @import "../../breakpoints/breakpoints.scss";
 
-footer{
-    height: 10vh;
-    background-color: black;
-    width: 100vw;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    .footer-dot{
-        height: 4px;
-        width: 4px;
-        background-color: $white;
-    }
-    a{
-        color: $white;
-        font-family: 'freight-neo-pro', 'sans-serif';
-        font-weight: 500;
-        text-decoration: none;
-        text-transform: uppercase;
-      
-    }
+footer {
+  height: 10vh;
+  background-color: black;
+  width: 100vw;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .footer-dot {
+    height: 4px;
+    width: 4px;
+    background-color: $white;
+  }
+  a {
+    color: $white;
+    font-family: "freight-neo-pro", "sans-serif";
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }

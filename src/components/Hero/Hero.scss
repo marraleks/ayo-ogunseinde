@@ -1,92 +1,89 @@
 @import "../../breakpoints/breakpoints.scss";
 
-.hero-container{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    background-color: black;
-    background-image: url(../../images/hero_image.jpg);
-    background-size: cover;
-    background-position: center;
+.hero-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: black;
+  background-image: url(../../images/hero_image.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h5 {
+    margin-top: -10vh;
+    color: $white;
+    font-size: 9rem;
+    mix-blend-mode: difference;
+  }
+  .professions {
+    width: 100%;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    h5{
-        margin-top: -10vh;
-        color: $white;
-        font-size: 9rem;
-        mix-blend-mode: difference;
-    }
-
-    .professions{
-        width: 100%;
-        display: grid;
-        justify-content: center;
-        grid-auto-flow: column;
-        gap: 50%;
-    }
-
-    p{
-        font-size: 1.5rem;        
-        color: $white;
-        font-family: 'freight-neo-pro', 'sans-serif';
-        font-weight: 500;
-    }
-    .scroll{
-        color: white;
-        position: absolute;
-        font-weight: 600;
-        transform: rotate(90deg);
-        text-transform: uppercase;
-        mix-blend-mode: difference;
-        z-index: 100;
-        bottom: 17px;
-        right: 0;
-    }
+    grid-auto-flow: column;
+    gap: 50%;
+  }
+  p {
+    font-size: 1.5rem;
+    color: $white;
+    font-family: "freight-neo-pro", "sans-serif";
+    font-weight: 500;
+  }
+  .scroll {
+    color: white;
+    position: absolute;
+    font-weight: 600;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    z-index: 100;
+    bottom: 17px;
+    right: 0;
+  }
 }
 
-@include media(">=LGdesktop"){
-    .hero-container{
-        h5{
-            font-size: 13rem;
-        }
+@include media(">=LGdesktop") {
+  .hero-container {
+    h5 {
+      font-size: 13rem;
     }
+  }
 }
 
-@include media("<=desktop"){
-    .hero-container{
-        h5{
-            font-size: 6rem;
-        }
-        .professions{
-            gap: 30%;
-        }
+@include media("<=desktop") {
+  .hero-container {
+    h5 {
+      font-size: 6rem;
     }
+    .professions {
+      gap: 30%;
+    }
+  }
 }
 
-@include media("<=smalldesk"){
-    .hero-container{
-        h5{
-            font-size: 5rem;
-        }
-        .scroll{
-            display: none;
-        }
-        .professions{
-            gap: 40%;
-        }
+@include media("<=smalldesk") {
+  .hero-container {
+    h5 {
+      font-size: 5rem;
     }
+    .scroll {
+      display: none;
+    }
+    .professions {
+      gap: 40%;
+    }
+  }
 }
 
-@include media("<=tablet"){
-    .hero-container{
-        height: calc(var(--vh, 1vh) * 100);
-        h5{
-            display: none;
-        }
-        .professions{
-            display: none;
-        }
+@include media("<=tablet") {
+  .hero-container {
+    height: calc(var(--vh, 1vh) * 100);
+    h5 {
+      display: none;
     }
+    .professions {
+      display: none;
+    }
+  }
 }
