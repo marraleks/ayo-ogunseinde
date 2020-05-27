@@ -31,10 +31,10 @@ const About = () => {
                 <p className="about-subheader">I'm Ayo Ogunseinde, an visual artist & photographer based in Houston. </p>
             </div>
             <section className="about-paragraph-container">
-            <p className="about-paragraph">Lorem Ipsum is   simply dummy text of the printing and   typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            <p className="about-paragraph">I stared taking pictures when I was a little kid, back then we didn’t have the equipment we have nowadays, which though me a lot. Everything I know about photographing and editing is self though, so yeah; I’m passionate about this s**t. 
             </p>
             <p className="about-paragraph">
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Some of my work I share on Unsplash. It makes me happy when I see people use my work in their projects. The feeling of accomplishment I get from it is special. I also do freelancing, you gotta do what you gotta do to survive. 
             </p>
             <div className="about-getintouch">
                 <p>get in touch</p>
