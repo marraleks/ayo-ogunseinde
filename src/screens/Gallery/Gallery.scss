@@ -1,107 +1,107 @@
-@import '../../breakpoints/breakpoints.scss';
+@import "../../breakpoints/breakpoints.scss";
 
-.gallery-screen{
-    height: 100vh;
-    width: 100vw;
+.gallery-screen {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(20, [col-start] 1fr);
+  grid-template-rows: repeat(14, [row-start] 1fr);
+
+  .gallery-img-container {
+    grid-column: 2/11;
+    grid-row: 2/14;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media("<=tablet") {
+      grid-column: 2/20;
+      grid-row: 4/11;
+    }
+  }
+  .image2 {
+    @include media("<=desktop") {
+      background-position: right;
+    }
+  }
+  .img-header {
+    grid-column: 12/20;
+    grid-row: 4/8;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    font-family: "freight-neo-pro", "sans-serif";
+    font-weight: 500;
+    @include media("<=desktop") {
+      font-size: 2.2rem;
+      grid-column: 12/20;
+    }
+    @include media("<=tablet") {
+      grid-column: 2/21;
+      grid-row: 2/4;
+      align-self: end;
+    }
+    @include media("<=phone") {
+      font-size: 2rem;
+      grid-column: 2/20;
+      grid-row: 2/11;
+      align-self: start;
+    }
+    @include media("<=400px") {
+      font-size: 1.5rem;
+    }
+  }
+  .camera-stats {
     display: grid;
-    grid-template-columns: repeat(20, [col-start] 1fr);
-    grid-template-rows: repeat(14, [row-start] 1fr);
-
-    .gallery-img-container{
-        grid-column: 2/11;
-        grid-row: 2/14;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        @include media("<=tablet"){
-            grid-column: 2/20;
-            grid-row: 4/11;
-        }
+    grid-template-columns: repeat(2, auto);
+    grid-column: 13/20;
+    grid-row: 8/11;
+    span {
+      font-weight: 600;
     }
-    .image2{
-        @include media("<=desktop"){
-            background-position: right;
-        }
+    @include media("<=tablet") {
+      grid-column: 1/21;
+      grid-row: 11/14;
+      align-self: center;
+      justify-self: center;
+      gap: 2vw 30vw;
     }
-    .img-header{
-        grid-column: 12/20;
-        grid-row: 4/8;
-        font-size: 2.9rem;
-        text-transform: uppercase;
-        font-family: 'freight-neo-pro', 'sans-serif';
-        font-weight: 500;
-        @include media("<=desktop"){
-            font-size: 2.5rem;
-            grid-column: 12/21;
-        }
-        @include media("<=tablet"){
-            grid-column: 2/21;
-            grid-row: 2/4;
-            align-self: end;
-        }
-        @include media("<=phone"){
-            font-size: 2rem;
-            grid-column: 2/20;
-            grid-row: 2/11;
-            align-self: start;
-        }
-        @include media("<=400px"){
-            font-size:1.5rem;
-        }
+    @include media("<=phone") {
     }
-    .camera-stats{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-column: 13/20;
-        grid-row: 8/11;
-        span{
-            font-weight: 600;
-        }
-        @include media("<=tablet"){
-            grid-column: 1/21;
-            grid-row: 11/14;
-            align-self: center;
-            justify-self: center;
-            gap: 2vw 30vw;
-        }
-        @include media("<=phone"){
-        }
+  }
+  .gallery-navs {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: 13/21;
+    align-self: end;
+    grid-row: 13;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      width: fit-content;
     }
-    .gallery-navs{
-        display: grid;
-        grid-auto-flow: column;
-        grid-column: 13/21;
-        align-self: end;
-        grid-row: 13;
-        a{
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            width: fit-content;
-        }
-        @include media("<=tablet"){
-            grid-column: 1/21;
-            grid-row: 14;
-            gap: 100px;
-            align-self: center;
-            justify-self: center;
-        }
+    @include media("<=tablet") {
+      grid-column: 1/21;
+      grid-row: 14;
+      gap: 100px;
+      align-self: center;
+      justify-self: center;
     }
+  }
 }
 
-.close-btn{ 
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    @include media("<=tablet"){
-        top: 5%;
-        right: 5%;
-    }
-    @include media("<=phone"){
-        top: 2%;
-        right: 5%;
-    }
+.close-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include media("<=tablet") {
+    top: 5%;
+    right: 5%;
+  }
+  @include media("<=phone") {
+    top: 2%;
+    right: 5%;
+  }
 }
